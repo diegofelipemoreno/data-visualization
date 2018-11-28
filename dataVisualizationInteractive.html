@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+	
+	<div id="visualization">
+		<div>Gross Domestic Product (Current US$ in Trillions)</div>
+		<div id="chartDynamic"></div>
+		<div id="controls">
+			 <p>Select Regions to Include:</p>
+			<label> 
+				<span style="background-color:red;"></span> 
+				<input type="checkbox" checked="true">East Asia & Pacific
+			</label>
+			<label>
+				<span style="background-color:blue;"></span>
+				<input type="checkbox" checked="true">Europe & Central Asia
+			</label>
+			<label>
+				<span style="background-color:green;"></span>
+				<input type="checkbox" checked="true"> Latin America & Caribbean
+			</label>
+			<label>
+				<span style="background-color:brown;"></span> 
+				<input type="checkbox" checked="true"> Middle East & North Africa
+			</label>
+			<label>
+				<span style="background-color:#FF7F00;"></span>
+				<input type="checkbox" checked="true"> South Asia
+			</label>
+			<label>
+				<span style="background-color:#FFFF33;"></span> 
+				<input type="checkbox" checked="true"> Sub-Saharan Africa
+			</label>
+		</div>
+	</div>
+	<br><hr><br>
+
+	<div id="chartCompare">
+		<div id="marker" class="marker"></div>
+	</div>
+
+	<br><hr><br>
+	<div id="chartAjax" style="width:600px;height:300px;"></div>
+
+	<style>
+		#visualization {
+			width: 900px;
+		}
+		#chartDynamic {
+			width: 500px;
+			height: 333px;
+			display: inline-block;
+		}
+
+		#controls {
+			width: 300px;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		#controls label {
+			display: block;
+		}	
+
+		#controls label span {
+			background-color:grey;
+			height:0.9em;
+			width:0.9em;
+			margin-right:0.25em;
+			display:inline-block;
+		}
+
+		#chartCompare {
+			margin: 0 auto;
+			position: relative;
+			width: 800px;
+		}
+
+		.legendRegion {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.chart {
+			display: inline-block;
+		}
+
+		.marker {
+			position: absolute;
+			height: 100%;
+			width: 2px;
+			background-color: black;
+			left: 0;
+			top:0;
+			display: block;
+		}
+
+		.markerDataContainer {
+			height: 50px;
+			width: 100px;
+			padding-top: 10px;
+		}
+	</style>
+	<!--[if lt IE 9]><script src="excanvas.min.js"></script><![endif]-->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.7/jquery.flot.min.js"></script>
+	<script src="modelsInteractive.js"></script>
+	<script src="scriptInteractive.js"></script>
+</body>
+</html>

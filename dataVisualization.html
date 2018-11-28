@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+	<div id="chart" style="width:600px;height:300px;"></div>
+
+	<br><hr><br>
+
+	<div id="line" style="width:600px;height:300px;"></div>
+
+	<br><hr><br>
+
+	<div id="pie" style="width:600px;height:300px;"></div>
+
+	<br><hr><br>
+
+	<div id="scatterChart" style="width:600px;height:300px;"></div>
+
+	<br><hr><br>
+
+	<div id="scatterChart2" style="width:600px;height:300px;"></div>
+
+	<br><hr><br>
+
+	<div class="bubbleChartContainer">
+		<div id="bubbleChart" style="width:600px;height:300px;"></div>
+		<img class="bubbleChartImg" src="img/gulf.png"/>
+	</div>
+
+	<style>
+	    #bubbleChart {
+	    	position: relative;
+	    	z-index: 9999;
+	    }
+		.bubbleChartContainer {
+			position: relative;
+		}
+		.bubbleChartImg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 0;
+			width: 600px;
+			height: 300px;
+		}	
+	</style>
+	<script src="flotr2.min.js"></script>
+	<script src="models.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
